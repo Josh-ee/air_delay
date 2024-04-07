@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions</title>
+</head>
+<body>
+    <h1>Flight Delay Predictions</h1>
+    {% if predictions %}
+        <ul>
+            {% for prediction in predictions %}
+                <li>Predicted Delay: {{ prediction }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No predictions available.</p>
+    {% endif %}
+    <a href="/">Go Back</a>
+</body>
+</html>
